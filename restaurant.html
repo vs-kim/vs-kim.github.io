@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>PizzaBurger</title>
+	<link
+			href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic"
+			rel="stylesheet"
+	/>
+	<link rel="stylesheet" href="css/normalize.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+	<div class="container">
+		<header class="header">
+			<a href="index.html" class="logo">
+				<img src="img/icon/logo.svg" alt="Logo"/>
+			</a>
+			<label class="address">
+				<input type="text" class="input input-address" placeholder="Delivery address"/>
+			</label>
+			<div class="buttons">
+				<button class="button button-primary button-auth">
+					<span class="button-auth-svg"></span>
+					<span class="button-text">Sign In</span>
+				</button>
+				<button class="button" id="cart-button">
+					<span class="button-cart-svg"></span>
+					<span class="button-text">Cart</span>
+				</button>
+			</div>
+		</header>
+	</div>
+	<!-- /.container  -->
+
+	<main class="main">
+		<div class="container">
+			<section class="menu">
+				<div class="section-heading">
+					<h2 class="section-title restaurant-title">Pizza+</h2>
+					<div class="card-info">
+						<div class="rating">
+							4.5
+						</div>
+						<div class="price">15$</div>
+						<div class="category">pizza</div>
+					</div>
+					<!-- /.card-info -->
+				</div>
+				<div class="cards cards-menu">
+					<div class="card">
+						<img src="img/pizza-plus/pizza-vesuvius.jpg" alt="image" class="card-image"/>
+						<div class="card-text">
+							<div class="card-heading">
+								<h3 class="card-title card-title-reg">Пицца Везувий</h3>
+							</div>
+							<!-- /.card-heading -->
+							<div class="card-info">
+								<div class="ingredients">Соус томатный, сыр «Моцарелла», ветчина, пепперони, перец
+								                         «Халапенье», соус «Тобаско», томаты.
+								</div>
+							</div>
+							<!-- /.card-info -->
+							<div class="card-buttons">
+								<button class="button button-primary button-add-cart">
+									<span class="button-card-text">В корзину</span>
+									<span class="button-cart-svg"></span>
+								</button>
+								<strong class="card-price-bold">545 ₽</strong>
+							</div>
+						</div>
+						<!-- /.card-text -->
+					</div>
+					<!-- /.card -->
+
+					<div class="card">
+						<img src="img/pizza-plus/pizza-girls.jpg" alt="image" class="card-image"/>
+						<div class="card-text">
+							<div class="card-heading">
+								<h3 class="card-title card-title-reg">Пицца Девичник</h3>
+							</div>
+							<!-- /.card-heading -->
+							<div class="card-info">
+								<div class="ingredients">Соус томатный, постное тесто, нежирный сыр, кукуруза, лук, маслины,
+								                         грибы, помидоры, болгарский перец.
+								</div>
+							</div>
+							<!-- /.card-info -->
+							<div class="card-buttons">
+								<button class="button button-primary button-add-cart">
+									<span class="button-card-text">В корзину</span>
+									<span class="button-cart-svg"></span>
+								</button>
+								<strong class="card-price-bold">450 ₽</strong>
+							</div>
+						</div>
+						<!-- /.card-text -->
+					</div>
+					<!-- /.card -->
+
+					<div class="card">
+						<img src="img/pizza-plus/pizza-oleole.jpg" alt="image" class="card-image"/>
+						<div class="card-text">
+							<div class="card-heading">
+								<h3 class="card-title card-title-reg">Пицца Оле-Оле</h3>
+							</div>
+							<!-- /.card-heading -->
+							<div class="card-info">
+								<div class="ingredients">Соус томатный, сыр «Моцарелла», черри, маслины, зелень, майонез
+								</div>
+							</div>
+							<!-- /.card-info -->
+							<div class="card-buttons">
+								<button class="button button-primary button-add-cart">
+									<span class="button-card-text">В корзину</span>
+									<span class="button-cart-svg"></span>
+								</button>
+								<strong class="card-price-bold">440 ₽</strong>
+							</div>
+						</div>
+						<!-- /.card-text -->
+					</div>
+					<!-- /.card -->
+
+					<div class="card">
+						<img src="img/pizza-plus/pizza-plus.jpg" alt="image" class="card-image"/>
+						<div class="card-text">
+							<div class="card-heading">
+								<h3 class="card-title card-title-reg">Пицца Плюс</h3>
+							</div>
+							<!-- /.card-heading -->
+							<div class="card-info">
+								<div class="ingredients">Соус томатный, сыр «Моцарелла», сыр «Чеддер», томаты, пепперони,
+								                         телятина, грибы, бекон, болгарский перец.
+								</div>
+							</div>
+							<!-- /.card-info -->
+							<div class="card-buttons">
+								<button class="button button-primary button-add-cart">
+									<span class="button-card-text">В корзину</span>
+									<span class="button-cart-svg"></span>
+								</button>
+								<strong class="card-price-bold">805 ₽</strong>
+							</div>
+						</div>
+						<!-- /.card-text -->
+					</div>
+					<!-- /.card -->
+
+					<div class="card">
+						<img src="img/pizza-plus/pizza-hawaiian.jpg" alt="image" class="card-image"/>
+						<div class="card-text">
+							<div class="card-heading">
+								<h3 class="card-title card-title-reg">Пицца Гавайская</h3>
+							</div>
+							<!-- /.card-heading -->
+							<div class="card-info">
+								<div class="ingredients">Соус томатный, сыр «Моцарелла», ветчина, ананасы</div>
+							</div>
+							<!-- /.card-info -->
+							<div class="card-buttons">
+								<button class="button button-primary button-add-cart">
+									<span class="button-card-text">В корзину</span>
+									<span class="button-cart-svg"></span>
+								</button>
+								<strong class="card-price-bold">440 ₽</strong>
+							</div>
+						</div>
+						<!-- /.card-text -->
+					</div>
+					<!-- /.card -->
+
+					<div class="card">
+						<img src="img/pizza-plus/pizza-classic.jpg" alt="image" class="card-image"/>
+						<div class="card-text">
+							<div class="card-heading">
+								<h3 class="card-title card-title-reg">Пицца Классика</h3>
+							</div>
+							<!-- /.card-heading -->
+							<div class="card-info">
+								<div class="ingredients">Соус томатный, сыр «Моцарелла», сыр «Пармезан», ветчина, салями,
+								                         грибы.
+								</div>
+							</div>
+							<!-- /.card-info -->
+							<div class="card-buttons">
+								<button class="button button-primary button-add-cart">
+									<span class="button-card-text">В корзину</span>
+									<span class="button-cart-svg"></span>
+								</button>
+								<strong class="card-price-bold">510 ₽</strong>
+							</div>
+						</div>
+						<!-- /.card-text -->
+					</div>
+					<!-- /.card -->
+				</div>
+				<!-- /.cards -->
+			</section>
+		</div>
+		<!-- /.container -->
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-block">
+				<img src="img/icon/logo.svg" alt="logo" class="logo footer-logo"/>
+				<nav class="footer-nav">
+					<a href="#" class="footer-link">Restaurants</a>
+                    <a href="#" class="footer-link">For couriers</a>
+                    <a href="#" class="footer-link">Advertising</a>
+                    <a href="#" class="footer-link">Contacts</a>
+				</nav>
+				<div class="social-links">
+					<a href="#" class="social-link"><img src="img/social/instagram.svg" alt="instagram"/></a>
+					<a href="#" class="social-link"><img src="img/social/fb.svg" alt="facebook"/></a>
+					<a href="#" class="social-link"><img src="img/social/vk.svg" alt="vk"/></a>
+				</div>
+				<!-- /.social-links -->
+			</div>
+			<!-- /.footer-block -->
+		</div>
+	</footer>
+
+	<div class="modal modal-cart">
+		<div class="modal-dialog">
+			<div class="modal-header">
+				<h3 class="modal-title">Cart</h3>
+				<button class="close">&times;</button>
+			</div>
+			<!-- /.modal-header -->
+			<div class="modal-body">
+				<!-- 1 -->
+				<div class="food-row">
+					<div class="span food-name">Roll eel standard</div>
+					<strong class="food-price">35$</strong>
+					<div class="food-counter">
+						<button class="counter-button">-</button>
+						<span class="counter">1</span>
+						<button class="counter-button">+</button>
+					</div>
+				</div>
+				 <!-- 2 -->
+				<div class="food-row">
+				  <div class="span food-name">Roll eel standard</div>
+				  <strong class="food-price">35$</strong>
+				  <div class="food-counter">
+					  <button class="counter-button">-</button>
+					  <span class="counter">1</span>
+					  <button class="counter-button">+</button>
+				  </div>
+			  </div>
+			   <!-- 3 -->
+			  <div class="food-row">
+				  <div class="span food-name">Roll eel standard</div>
+				  <strong class="food-price">35$</strong>
+				  <div class="food-counter">
+					  <button class="counter-button">-</button>
+					  <span class="counter">1</span>
+					  <button class="counter-button">+</button>
+				  </div>
+			  </div>
+			   <!-- 4 -->
+			  <div class="food-row">
+				  <div class="span food-name">California salmon</div>
+				  <strong class="food-price">30$</strong>
+				  <div class="food-counter">
+					  <button class="counter-button">-</button>
+					  <span class="counter">1</span>
+					  <button class="counter-button">+</button>
+				  </div>
+			  </div>
+			   <!-- 5 -->
+			  <div class="food-row">
+				  <div class="span food-name">California salmon</div>
+				  <strong class="food-price">32$</strong>
+				  <div class="food-counter">
+					  <button class="counter-button">-</button>
+					  <span class="counter">1</span>
+					  <button class="counter-button">+</button>
+				  </div>
+			  </div>
+  
+			</div> 
+			<!-- /.modal-body -->
+			<div class="modal-footer">
+				<span class="modal-pricetag">50$</span>
+				<div class="footer-buttons">
+					<button class="button button-primary">Checkout</button>
+					<button class="button clear-cart">Cancel</button>
+				</div>
+			</div>
+			<!-- /.modal-footer -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+
+
+	<script src="js/main.js"></script>
+</body>
+</html>
