@@ -22,6 +22,20 @@ const cardsMenu = document.querySelector('.cards-menu');
 let login = localStorage.getItem('Delivery');
 //функция открытия/закрытия модального окна
 
+// функция запрос на сервер
+const getData = async function(url)
+{
+  const response = await fetch(url);
+
+  if(!response.ok)
+  {
+    throw new Error(`Address error${url}, 
+    status error ${response.status}!`)
+  }
+  return await response.json();
+}
+
+
 function toggleModal()
 {
    modal.classList.toggle("is-open");
@@ -103,26 +117,27 @@ else
 
 //week2
 
-function createCardRestaurant()
+function createCardRestaurant({ image, kitchen, name, price, stars, products,
+  time_of_delivery })
 {
   const card = `
-    <a class="card card-restaurant">
-      <img src="img/tanuki/preview.jpg" alt=tanuki class="card-image"/>
-          <div class="card-text">
-          <div class="card-heading">
-            <h3 class="card-title">Tanuki</h3>
-            <span class="card-tag tag">60min</span>
+  <a class="card card-restaurant" data-products = "${products}">
+    <img src="${image}" alt=tanuki class="card-image"/>
+        <div class="card-text">
+        <div class="card-heading">
+          <h3 class="card-title">${name}</h3>
+          <span class="card-tag tag">${time_of_delivery}</span>
+        </div>
+        <div class="card-info">
+          <div class="rating">
+            ${stars}
           </div>
-          <div class="card-info">
-            <div class="rating">
-              4.5
-            </div>
-            <div class="price">50$</div>
-            <div class="category">Sushi&Rolls</div>
-          </div>
-      </div>
-  </a>
-  `;
+          <div class="price">${price}</div>
+          <div class="category">${kitchen}</div>
+        </div>
+    </div>
+</a>
+`;
   cardsRestaurants.insertAdjacentHTML("afterbegin", card);
 
 }
@@ -132,6 +147,9 @@ function createCardGood()
 {
   const card = document.createElement('div');
   card.className = 'card';
+
+
+
   card.insertAdjacentHTML("beforeend", `
   
   <img src="img/pizza-plus/pizza-classic.jpg" alt="image" class="card-image"/>
@@ -183,29 +201,31 @@ function openGoods(event)
 }
 
 
-cartButton.addEventListener('click', toggleModal);
 
-close.addEventListener('click', toggleModal);
- 
-
-cardsRestaurants.addEventListener('click', openGoods);
-
-logo.addEventListener('click', function()
+function init()
 {
-  containerPromo.classList.remove('hide')
-  restaurants.classList.remove('hide')
-  menu.classList.add('hide')
-})
+    getData('./db/partners.json').then(function(data)
+    {
+        data.forEach(createCardRestaurant);
+    });
 
-checkAuth();//вызываем один раз при первой загрузке страницы
+    cartButton.addEventListener('click', toggleModal);
 
-createCardRestaurant();
-createCardRestaurant();
-createCardRestaurant();
-createCardRestaurant();
-createCardRestaurant();
-createCardRestaurant();
+    close.addEventListener('click', toggleModal);
+    
 
+    cardsRestaurants.addEventListener('click', openGoods);
 
+    logo.addEventListener('click', function()
+    {
+      containerPromo.classList.remove('hide')
+      restaurants.classList.remove('hide')
+      menu.classList.add('hide')
+    })
+
+    checkAuth();//вызываем один раз при первой загрузке страницы
+}
+
+init();
 
 
